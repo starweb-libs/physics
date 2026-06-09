@@ -18,7 +18,7 @@ SAT and circle collision detection for the browser, built with TypeScript.
 
 ## Installation
 ```bash
-npm install github:starlet-web-engine/starweb-physics
+npm install github:starweb-libs/physics
 ```
 
 ## License
