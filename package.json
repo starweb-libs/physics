@@ -2,7 +2,7 @@
   "name": "@starweb-libs/physics",
   "description": "SAT and circle collision detection for the browser",
   "author": "Mason L'Etoile",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -14,32 +14,40 @@
   },
   "keywords": ["physics", "collision", "sat", "2d", "typescript", "browser", "starweb"],
   "type": "module",
-  "devDependencies": { "typescript": "~6.0.2" },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "tsdown": "^0.22.0"
+  },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsdown",
     "prepare": "npm run build"
   },
   "files": ["dist"],
   "exports": {
     "./body.js": {
-      "types": "./dist/body.d.ts",
-      "import": "./dist/body.js"
+      "types": "./dist/body.d.mts",
+      "@starweb-libs/source": "./src/body.ts",
+      "import": "./dist/body.mjs"
     },
     "./collision.js": {
-      "types": "./dist/collision.d.ts",
-      "import": "./dist/collision.js"
+      "types": "./dist/collision.d.mts",
+      "@starweb-libs/source": "./src/collision.ts",
+      "import": "./dist/collision.mjs"
     },
     "./geometry.js": {
-      "types": "./dist/geometry.d.ts",
-      "import": "./dist/geometry.js"
+      "types": "./dist/geometry.d.mts",
+      "@starweb-libs/source": "./src/geometry.ts",
+      "import": "./dist/geometry.mjs"
     },
     "./overlap.js": {
-      "types": "./dist/overlap.d.ts",
-      "import": "./dist/overlap.js"
+      "types": "./dist/overlap.d.mts",
+      "@starweb-libs/source": "./src/overlap.ts",
+      "import": "./dist/overlap.mjs"
     },
     "./types.js": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/types.js"
+      "types": "./dist/types.d.mts",
+      "@starweb-libs/source": "./src/types.ts",
+      "import": "./dist/types.mjs"
     }
   }
 }
